@@ -1,0 +1,23 @@
+[Desktop Entry]
+
+# The type of the thing this desktop file refers to (e.g. can be Link)
+Type=Application
+
+# The application name.
+Name=HTTP Файловый сервер
+
+# Tooltip comment to show in menus.
+Comment=HTTP Файловый сервер.
+
+# The path (folder) in which the executable is run
+Path=/opt/http_server
+
+# The executable (can include arguments)
+Exec=/opt/http_server/http_server
+
+# The icon for the entry, using the name from `hicolor/scalable` without the extension.
+# You can also use a full path to a file in /opt.
+Icon=http_server
+
+# Category
+Category=Network
