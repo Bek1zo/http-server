@@ -7,17 +7,50 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(480, 350)
+        MainWindow.resize(480, 345)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QSize(480, 350))
-        MainWindow.setMaximumSize(QSize(480, 350))
+        MainWindow.setMinimumSize(QSize(480, 345))
+        MainWindow.setMaximumSize(QSize(480, 345))
         icon = QIcon()
-        icon.addFile(u"favicon.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"assets/favicon.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
+        MainWindow.setStyleSheet(
+            """
+                QWidget {
+                    background-color:#2C3E50;
+                    color: #fff
+                }
+                
+                QPushButton{
+                    background-color:#06799F;
+                    border:none;
+                    color:#ffffff;
+                    font-size:12px;
+                    font-family:Tahoma;
+                }
+                
+                QPushButton:disabled {
+                    background-color: #024E68;
+                }
+                
+                QPushButton:hover {
+                    background-color:#216278;
+                }
+                
+                QTextEdit {
+                    background-color: #fff;
+                    color: black;
+                }
+                
+                QMenuBar {
+                    border-bottom: 1px solid #024E68
+                }
+            """
+        )
         self.actionInfo = QAction(MainWindow)
         self.actionInfo.setObjectName(u"actionInfo")
         self.actionExit = QAction(MainWindow)
@@ -60,7 +93,7 @@ class Ui_MainWindow(object):
         self.chooseDirButton.setAutoDefault(False)
         self.aboutLabel = QLabel(self.centralwidget)
         self.aboutLabel.setObjectName(u"aboutLabel")
-        self.aboutLabel.setGeometry(QRect(13, 299, 461, 31))
+        self.aboutLabel.setGeometry(QRect(10, 300, 461, 21))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QMenuBar(MainWindow)
         self.menuBar.setObjectName(u"menuBar")
@@ -78,7 +111,6 @@ class Ui_MainWindow(object):
 
         self.stopButton.setDefault(False)
         self.chooseDirButton.setDefault(False)
-
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi

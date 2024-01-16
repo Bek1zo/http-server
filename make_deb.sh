@@ -6,7 +6,7 @@ mkdir -p package/usr/share/icons/hicolor/scalable/apps
 
 cp -r dist/http_server package/opt/http_server
 
-cp favicon.png package/usr/share/icons/hicolor/scalable/apps/http_server.png
+cp assets/favicon.png package/usr/share/icons/hicolor/scalable/apps/http_server.png
 cp http_server.desktop package/usr/share/applications
 
 find package/opt/http_server -type f -exec chmod 644 -- {} +

@@ -18,7 +18,7 @@ class MyWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
         # Инициализация иконки трея
-        self.icon = QtGui.QIcon('favicon.png')
+        self.icon = QtGui.QIcon('assets/favicon.png')
         self.tray_icon = QtWidgets.QSystemTrayIcon()
         self.tray_icon.setIcon(self.icon)
         self.tray_icon.setVisible(True)
@@ -58,6 +58,7 @@ class MyWindow(QtWidgets.QMainWindow):
     def choose_dir_menu(self):
         """ Открытие дополнительного окна с выбором каталога для расшаривания """
         self.dir = QtWidgets.QFileDialog.getExistingDirectory(self)
+        if len(self.dir) == 0: self.dir = '~'
 
     def closeEvent(self, event):
         """ Переопределение метода выхода из приложения. """

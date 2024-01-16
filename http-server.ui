@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>345</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>345</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>480</width>
+    <height>345</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>HTTP File Server</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../.designer/backup/favicon.png</normaloff>../../.designer/backup/favicon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background-color:#2C3E50;
+	color: #fff
+}
+
+QPushButton{
+	background-color:#4a93ca;
+	border:none;
+	color:#ffffff;
+	font-size:12px;
+	font-family:Tahoma;
+}
+
+QPushButton:hover {
+	background-color:#ea5e00;
+}
+
+QPushButton:pressed {
+	background-color:#994005;
+}
+
+QTextEdit {
+	background-color: #fff;
+}
+
+QMenuBar {
+	border-bottom: 1px solid #QWidget {
+	background-color:#2C3E50;
+	color: #fff
+}
+
+QPushButton{
+	background-color:#4a93ca;
+	border:none;
+	color:#ffffff;
+	font-size:12px;
+	font-family:Tahoma;
+}
+
+QPushButton:hover {
+	background-color:#ea5e00;
+}
+
+QPushButton:pressed {
+	background-color:#994005;
+}
+
+QTextEdit#history {
+	background-color: #fff;
+	color: black;
+}
+
+QMenuBar {
+	border-bottom: 1px solid #4a93ca
+}
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="startButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Запустить сервер</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stopButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Остановить сервер</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="serverPort">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>8000</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="serverPortLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>54</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Порт:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="serverAdress">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>50</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>127.0.0.1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="serverAddressLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>60</y>
+      <width>54</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IP-Адрес</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="history">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>461</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chooseDirButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Указать каталог</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="aboutLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>461</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Разработчик: Кащеев Павел Евгеньевич &amp; Казанцев Георгий Валентинович</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="actionInfo"/>
+    <addaction name="actionTray"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="actionTray">
+   <property name="text">
+    <string>Свернуть в трей</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
